@@ -28,7 +28,7 @@ beforeEach(() => {
     cy.get('div:nth-child(2) > div.form-group > nb-select > button').click();
     cy.get('#nb-option-33').click();
     cy.get('.appearance-filled.status-basic').click();
-    cy.get('nb-toastr').then(tile => {
+    cy.get('nb-toast[ng-reflect-toast]').then(tile => {
      
         expect(tile).to.have.css('background-color')
         .and('eq', 'rgb(96, 175, 32)');
